@@ -2,8 +2,7 @@
 # Linux Commands Lab: `grep` and `wc`
 
 This lab is a brief tutorial on `grep` and `wc`, two useful Linux commands that
-frequently used together to count the number of occurrences of certain phrases in
-some specified files.
+count the number of occurrences of certain phrases in some specified files.
 
 To start working on this lab you must be logged in to the Edlab and in your
 `cs230` directory. From this directory run the command:
@@ -25,7 +24,7 @@ commonly used flags:
 * `grep`: `-i`, `-v`, `-c`, `-n`
 * `wc`: `-w`, `-l`, `-m`
 
-The command line utility `grep` searches plain text data sets for *lines* that
+The command line utility `grep` searches plain text data sets for lines that
 matches a specified pattern. It then prints to `stdout` all the lines that
 contain the matching pattern. For example:
 
@@ -73,7 +72,7 @@ can do:
 $ ls | grep .txt
 ```
 
-Furthermore, if we want to count all the number of text files in the current
+Furthermore, if we want to count the number of all the text files in the current
 directory, we do:
 
 ```
