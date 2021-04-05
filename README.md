@@ -29,7 +29,7 @@ matches a specified pattern. It then prints to `stdout` all the lines that
 contain the matching pattern. For example:
 
 ```
-$ grep -n Circe odyssey.txt
+$ grep -n Circe books/odyssey.txt
 ```
 
 This command searches `odyssey.txt` for every line that contains "Circe" and
@@ -39,14 +39,14 @@ We can also do "invert matching" with `grep`. If we want to print all the lines
 in `aladdin.txt` that do *not* contain the word `Aladdin`, we do:
 
 ```
-$ grep -vn Aladdin aladdin.txt
+$ grep -vn Aladdin books/aladdin.txt
 ```
 
 If we want to count the number of lines where the word "aladdin" shows up in
 `aladdin.txt`, case-insensitive, we do:
 
 ```
-$ grep -ic aladdin aladdin.txt
+$ grep -ic aladdin books/aladdin.txt
 ```
 
 The command line utility `wc` reads either standard input or a list of computer
@@ -57,13 +57,13 @@ For example, if we want to know the total number of words contained in all the
 text files in the current directory, we do the following:
 
 ```
-$ wc -w *.txt
+$ wc -w books/*.txt
 ```
 
 Very often we would like to combine two or more of Linux commands via *piping*.
 A pipe is a form of redirection (transfer of standard output to some other
 destination) that is used to send the output of one command to another command
-for further processing. The commands are linked by the pipe character `|`. 
+for further processing. The commands are linked by the pipe character `|`.
 
 For example, if we want to list all the text files in the current directory, we
 can do:
