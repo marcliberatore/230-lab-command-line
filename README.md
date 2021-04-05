@@ -42,7 +42,7 @@ in `aladdin.txt` that do *not* contain the word `Aladdin`, we do:
 $ grep -vn Aladdin aladdin.txt
 ```
 
-If we want to count the number of times the word "aladdin" shows up in
+If we want to count the number of lines where the word "aladdin" shows up in
 `aladdin.txt`, case-insensitive, we do:
 
 ```
