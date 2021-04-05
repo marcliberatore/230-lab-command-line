@@ -69,14 +69,14 @@ For example, if we want to list all the text files in the current directory, we
 can do:
 
 ```
-$ ls | grep .txt
+$ ls | grep "\.txt"
 ```
 
 Furthermore, if we want to count the number of all the text files in the current
 directory, we do:
 
 ```
-$ ls | grep .txt | wc -l
+$ ls | grep "\.txt" | wc -l
 ```
 
 If we want to know the number of words contained in all the text files in the
