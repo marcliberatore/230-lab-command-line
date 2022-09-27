@@ -8,7 +8,7 @@ To start working on this lab you must be logged in to the Edlab and in your `cs2
 From this directory run the command:
 
 ```
-$ git clone https://github.com/marcliberatore/230-lab-bits-and-bytes
+$ git clone https://github.com/marcliberatore/230-lab-command-line.git
 ```
 
 to make a copy of this lab directory, or use [Github Desktop](https://desktop.github.com), or download and decompress a zip file directly from Github to use locally (the green "Code" button has a "Download ZIP" option). 
