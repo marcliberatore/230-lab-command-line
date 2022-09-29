@@ -1,5 +1,5 @@
 # COMPSCI 230 Computer Systems Principles
-# Linux Command Line lab
+# Linux Command Line lab: `grep` and `wc`
 
 This lab is a brief tutorial on several useful aspects of the Unix command line.
 
@@ -8,12 +8,12 @@ To start working on this lab you must be logged in to the Edlab and in your `cs2
 From this directory run the command:
 
 ```
-$ git clone https://github.com/marcliberatore/230-lab-command-line.git
+$ git clone https://github.com/marcliberatore/230-lab-grep-wc.git
 ```
 
 to make a copy of this lab directory, or use [Github Desktop](https://desktop.github.com), or download and decompress a zip file directly from Github to use locally (the green "Code" button has a "Download ZIP" option). 
 
-## Part 1: `grep` and `wc`
+##  `grep` and `wc`
 
 This lab is a brief tutorial on `grep` and `wc`, two useful Linux commands that
 count the number of occurrences of certain phrases in some specified files.
@@ -97,103 +97,3 @@ $ cat *.txt | wc -w
 
 Please read the manual pages for `grep` and `wc`, experiment with the various
 flags, and answer the questions on Gradescope associated with this lab.
-
-## Part 2: Some shell scripting
-
-First, move (or copy) the file `aladdin.txt` from the `books/` subdirectory to the current directory:
-
-```sh
-mv books/aladdin.txt .
-
-# or you can use cp if you like
-```
-
-In order to be able to run the script `split.sh`, first do the following:
-
-```
-$ chmod +x split.sh
-```
-
-This will give `split.sh` "execute" permission for all users. Now you can run
-`split.sh`:
-
-```
-$ ./split.sh
-```
-
-After running the script, inspect the current directory and the directory and
-files the script created. What does this script do?
-
-Open `split.sh` in your favorite text editor and examine the code. Try to
-understand what each line does as much as you can.
-
-Look up the usage of `printf` with:
-
-```
-man printf
-```
-
-Recall that in Project 2, you are asked to read up on the documentation of
-`printf` with:
-
-```
-man 3 printf
-```
-
-What is the difference between these two man pages?
-
-Modify **one line** in `split.sh` so that instead of file names
-
-```
-0.txt
-1.txt
-2.txt
-...
-10.txt
-11.txt
-12.txt
-...
-100.txt
-101.txt
-102.txt
-...
-```
-we have
-
-```
-000.txt
-001.txt
-002.txt
-...
-010.txt
-011.txt
-012.txt
-...
-100.txt
-101.txt
-102.txt
-...
-```
-
-Both man pages of `printf` will be helpful here.
-
-Now let's implement a different script called `change_permission.sh`. By running
-`change_permission.sh` all files with extension `.txt` in a specified directory
-(which you will define in the script) should have read-only permission for all
-users. In addition, the string "\*\*\*READ ONLY\*\*\*" will be appended (use
-`>>`) to each `.txt` file as its last line.
-
-Some hints:
-
-1. You will want to write a `for` loop that goes over every file with extension
-`.txt`. See [here](http://linuxcommand.org/lc3_wss0130.php) for more hints of
-what it might look like.
-
-2. Check the man page of `chmod` to see how to set file permissions.
-
-3. Read about option `-l` in the man page of `ls` to see how to display file
-permissions. (This is useful when you test your script.)
-
-Visit the Gradescope assignment associated with this lab to complete the lab.
-You will be asked to answer questions associated with `split.sh` and to submit
-your `change_permission.sh` file.
